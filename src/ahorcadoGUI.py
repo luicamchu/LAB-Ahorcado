@@ -115,8 +115,7 @@ class AhorcadoApp:
         self.label_mensaje.config(text="")
         self.canvas.delete("all")  # Limpiar el canvas
         self.dibujar_base()  # Dibujar nuevamente la base de la horca
-
-
+    
 # Cargar palabras desde un archivo
 palabras = cargar_palabras("data/palabras_ahorcado.txt")
 
