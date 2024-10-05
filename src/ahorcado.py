@@ -148,4 +148,30 @@ def ejecutar_turno(palabra_secreta, letras_probadas):
     else:
         return False
 
+#added ejericio 2 apartado a
+def jugar(max_intentos, palabras):
+    '''
+    Completar una partida hasta que el jugador gane o pierda:
+    - Mostrar mensaje de bienvenida
+    - Elegir la palabra secreta a adivinar
+    - Inicializar las variables del juego (letras probadas e intentos fallidos)
+    - Ejecutar los turnos de juego necesarios hasta finalizar la partida, y en cada turno:
+      > Averiguar si ha habido acierto o fallo
+      > Actualizar el contador de fallos si es necesario
+      > Comprobar si se ha superado el número de fallos máximo
+      > Comprobar si se ha completado la palabra
+      > Mostrar el mensaje de fin adecuado si procede o el número de intentos restantes
+    '''
+    #pass
+    print("Bienvenido al juego del ahorcado.")
+    #lp = cargar_palabras(palabras)
+    palabra = elegir_palabra(palabras)
+    while max_intentos > 0:
+        ejecutar_turno(palabra, {})
+        max_intentos = max_intentos - 1
+
+# Iniciar el juego
+if __name__ == "__main__":
+    palabras = cargar_palabras("data/palabras_ahorcado.txt")
+    jugar(6, palabras)
 
