@@ -55,7 +55,7 @@ def enmascarar_palabra(palabra, letras_probadas:str):
             empty_list.append(c)
         else:
             empty_list.append("_")
-        print(c)
+        #print(c)
     return ' '.join(empty_list)
 
 #added ejercicio 3 apartado d
@@ -131,6 +131,21 @@ def ejecutar_turno(palabra_secreta, letras_probadas):
     - Recuerda las funciones que ya has implementado para mostrar la palabra, pedir la letra y comprobarla
     '''
     #pass
-    enmascarar_palabra(palabra_secreta, letras_probadas)
-    pedir_letra(letras_probadas)
-    comprobar_palabra_completa(palabra_secreta, letras_probadas)
+    #enmascarar_palabra(palabra_secreta, letras_probadas)
+    resultado = enmascarar_palabra(palabra_secreta, letras_probadas)
+    print(f"Palabra enmascarada: {resultado}")
+
+    #pedir_letra(letras_probadas)
+    letra = pedir_letra(letras_probadas)
+    print(f"Letra introducida: {letra}")
+
+    #comprobar_letra(palabra_secreta, letras_probadas)
+    resultado = comprobar_palabra_completa(palabra_secreta, letras_probadas)
+    
+    if (resultado):
+        print("¡Bien hecho! Esa letra está en la palabra.")
+        return True
+    else:
+        return False
+
+

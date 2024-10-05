@@ -40,8 +40,10 @@ def test_ejecutar_turno(palabra_secreta, letras_probadas):
     acierto = ejecutar_turno(palabra_secreta, letras_probadas)
     print(f"Resultado: {'Acierto' if acierto else 'Fallo'}")
     print()
+    
 
 if __name__ == "__main__":
+    '''
     test_cargar_palabras("data/palabras_ahorcado.txt")
     PALABRAS = cargar_palabras("data/palabras_ahorcado.txt")
     test_elegir_palabra(PALABRAS)
@@ -55,6 +57,7 @@ if __name__ == "__main__":
     test_compobar_palabra_completa('python', {'p', 'y', 't', 'h', 'o', 'n'})
     test_compobar_palabra_completa('python', {'a', 'b', 'c', 'd', 'e'})
     test_compobar_palabra_completa('python', {})
+    '''
     test_ejecutar_turno('python', {'a', 'b', 'c', 'd', 'e'})
     test_ejecutar_turno('python', {'p', 'y', 't', 'h', 'o'})
    
